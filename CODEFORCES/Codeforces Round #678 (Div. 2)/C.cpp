@@ -64,14 +64,11 @@ int main()
     bool a = f();
     //cout<<sml<<" "<<grt<<endl;
 
-
     ll smlhave,grthave;
     smlhave = x-1;
     grthave = n-x;
 
-   // cout<<smlhave<<" "<<grthave<<endl;
-
-
+    //cout<<smlhave<<" "<<grthave<<endl;
 
     ll rem = n-sml-grt-1;
 
@@ -81,7 +78,6 @@ int main()
     {
         fac1 = (fac1%mod*j%mod)%mod;
     }
-
 
     for(ll i = 0, j = grthave;i<grt;i++,j--)
     {
@@ -93,10 +89,6 @@ int main()
     ll ans = (fct[rem]%mod*fac1%mod)%mod;
     ans = (ans%mod*fac2%mod)%mod;
     cout<<ans<<endl;
-
-
-
-
 
     return 0;
 }
