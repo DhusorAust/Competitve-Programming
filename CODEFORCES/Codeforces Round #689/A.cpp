@@ -8,30 +8,32 @@ typedef tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_up
 #define FAST ios_base::sync_with_stdio(false);cin.tie(NULL);
 
 
-
 int main()
 {
     FAST
-    ll n,k;
-    cin>>n>>k;
 
-    ll arr[n];
+    ll t;
+    cin>>t;
 
-    for(ll i = 0;i<n;i++)
+    while(t--)
     {
-        cin>>arr[i];
+        ll n, k;
+        cin>>n>>k;
+
+        for(ll i = 0;i<n;i++)
+        {
+            if(i%3==0)
+                cout<<"a";
+            if(i%3==1)
+                cout<<"b";
+            if(i%3==2)
+                cout<<"c";
+
+        }
+
+        cout<<endl;
     }
 
-    sort(arr,arr+n);
-
-    ll sum = arr[n-1];
-
-    for(ll i = 0,j = n-2;i<k;i++,j--)
-    {
-        sum+=arr[j];
-    }
-
-        cout<<sum<<endl;
     return 0;
 }
 

@@ -7,18 +7,30 @@ typedef long long ll;
 typedef tree<ll, null_type, less<ll>, rb_tree_tag, tree_order_statistics_node_update> ordered_set;
 #define FAST ios_base::sync_with_stdio(false);cin.tie(NULL);
 
-
-
 int main()
 {
     FAST
-    ll n, k;
-    cin>>n>>k;
-    string s;
-    cin>>s;
 
-    cout<<1<<endl;
+    ll t;
+    cin>>t;
 
+    while(t--)
+    {
+        ll a, b, c;
+        cin>>a>>b>>c;
+
+        ll sum = a+b+c;
+
+        if(sum%9==0 && sum/9 <= min(min(a,b),c))
+            cout<<"YES"<<endl;
+        else
+            cout<<"NO"<<endl;
+
+
+
+
+
+    }
 
     return 0;
 }
